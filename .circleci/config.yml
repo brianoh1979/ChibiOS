@@ -5,6 +5,7 @@ jobs:
       - image: circleci/python:3.6.9-stretch
     steps:
       - checkout
+      - run: sudo apt-get update
       - run:
           name: Install apt packages
           command: 'sudo apt install p7zip-full gcc-arm-none-eabi binutils-arm-none-eabi'
@@ -23,6 +24,7 @@ jobs:
       - image: circleci/python:3.6.9-stretch
     steps:
       - checkout
+      - run: sudo apt-get update
       - run:
           name: Intall apt packages
           command: 'sudo apt install libc6-dev-i386'
