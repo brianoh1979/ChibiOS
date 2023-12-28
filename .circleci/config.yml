@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Run Unit Tests
           command: |
-              ./test/rt/testbuild/build/libch.a
+              sudo bash ./test/rt/testbuild/build/libch.a
 
 workflows:
   version: 2
