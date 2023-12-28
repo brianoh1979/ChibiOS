@@ -32,7 +32,7 @@ jobs:
           name: Build Unit Tests
           command: |
               cd test/rt/testbuild
-              make
+              make clean
       - run:
           name: Run Unit Tests
           command: |
