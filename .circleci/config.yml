@@ -2,13 +2,13 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/python:3.8.4
+      - image: cimg/python:3.12.1
     steps:
       - checkout
-      - run: sudo apt-get update
+      - run: sudo apt-get update && sudo apt install p7zip-full p7zip-rar 
       - run:
           name: Install apt packages
-          command: 'sudo apt install p7zip-full gcc-arm-none-eabi binutils-arm-none-eabi'
+          command: 'sudo apt install p7zip-full unrar-free gcc-arm-none-eabi binutils-arm-none-eabi'
       - run:
           name: Build Demo
           command: |
